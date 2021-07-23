@@ -8,4 +8,10 @@ describe('Login', () => {
             cy.get(loginPage.emailError).should('contain','Invalid email address');
         });
     });
+    it('Correct login', () => {
+        cy.login('danim@gmail.com','danim123');
+        cy.fixture('myAccountPage').then((myAccount)=>{
+            cy.get(myAccount.accountLabel).should('exist');
+        });    
+    });
 });
