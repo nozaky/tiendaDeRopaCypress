@@ -1,0 +1,6 @@
+{
+    "emailInput": "#email",
+    "passInput": "#passwd",
+    "loginButton": "#SubmitLogin > span",
+    "emailError": "ol > li"
+}
