@@ -14,4 +14,12 @@ describe('Search elements', () => {
             cy.get(searchResult.errorAlert).should('contain','No results were found for your search');
         });
     });
+    it('search for elements with special code', () => {
+        cy.readFile('cypress/support/text/search.txt').then((text)=>{
+            cy.search(text);
+        });
+        cy.fixture('searchResult').then((searchResult)=>{
+            cy.get(searchResult.errorAlert).should('contain','No results were found for your search');
+        });
+    });
 });
