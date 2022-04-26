@@ -1,5 +1,6 @@
 {
     "searchInput": "#search_query_top",
     "searchButton": "#searchbox > .btn",
-    "loginButton": ".login"
+    "loginButton": ".login",
+    "shoppingCartButton": ".shopping_cart>a"
 }

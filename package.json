@@ -5,6 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "npx cypress run",
+    "report:xml": "npx jrm ./cypress/reports/junitreport.xml ./cypress/reports/junit/*.xml",
+    "create:zip": "node ./cypress/plugins/asZip.js",
+    "send:zip": "node ./cypress/plugins/sendData.js",
     "open": "npx cypress open"
   },
   "keywords": [
@@ -18,7 +21,14 @@
   "author": "Daniel Montero Lopez",
   "license": "ISC",
   "dependencies": {
-    "cypress": "^8.0.0"
+    "adm-zip": "^0.5.9",
+    "cypress": "^8.0.0",
+    "cypress-mochawesome-reporter": "^3.0.1",
+    "cypress-multi-reporters": "^1.5.0",
+    "junit-report-merger": "^3.0.5",
+    "mocha": "^9.2.2",
+    "mocha-junit-reporter": "^2.0.2",
+    "node-fetch": "^2.6.7"
   },
   "repository": {
     "type": "git",

@@ -30,3 +30,10 @@ Cypress.Commands.add('search', (value)=>{
         cy.get(homePage.searchButton).click();
     });
 });
+
+Cypress.Commands.add('openShopCart', ()=> {
+    cy.fixture('homePage').then((homePage) => {
+        cy.get(homePage.shoppingCartButton).click();
+        cy.log('Testted Open Shop');
+    });
+});

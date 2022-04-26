@@ -1,4 +1,19 @@
 {
     "projectId": "3mgxm8",
-    "baseUrl": "http://automationpractice.com/"
+    "baseUrl": "http://automationpractice.com/",
+    "reporter": "cypress-multi-reporters",
+    "reporterOptions": {
+        "reporterEnabled": "cypress-mochawesome-reporter, mocha-junit-reporter",
+        "cypressMochawesomeReporterReporterOptions": {
+        "reportDir": "cypress/reports",
+        "charts": true,
+        "reportPageTitle": "My Test Suite",
+        "embeddedScreenshots": true,
+        "inlineAssets": true
+        },
+        "mochaJunitReporterReporterOptions": {
+        "mochaFile": "cypress/reports/junit/results-[hash].xml"
+        }
+    },
+    "video": true
 }

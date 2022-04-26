@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Mocha Tests" time="21.3740" tests="3" failures="1">
+  <testsuite name="Root Suite" timestamp="2022-04-18T10:24:24" tests="0" file="cypress/integration/search.js" time="0.0000" failures="0">
+  </testsuite>
+  <testsuite name="Search elements" timestamp="2022-04-18T10:24:24" tests="3" time="21.3550" failures="1">
+    <testcase name="Search elements search for elements with multiple results" time="6.0120" classname="search for elements with multiple results">
+    </testcase>
+    <testcase name="Search elements search for elements with no results" time="0.0000" classname="search for elements with no results">
+      <failure message="Timed out retrying after 4000ms: expected &apos;&lt;p.alert.alert-warning&gt;&apos; to contain &apos;Fallo de test&apos;" type="AssertionError"><![CDATA[AssertionError: Timed out retrying after 4000ms: expected '<p.alert.alert-warning>' to contain 'Fallo de test'
+    at Context.eval (http://automationpractice.com/__cypress/tests?p=cypress\integration\search.js:112:39)]]></failure>
+    </testcase>
+    <testcase name="Search elements search for elements with special code" time="5.3380" classname="search for elements with special code">
+    </testcase>
+  </testsuite>
+</testsuites>
