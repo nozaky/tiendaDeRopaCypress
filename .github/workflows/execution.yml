@@ -27,10 +27,11 @@ jobs:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
     - run: npm ci
+      continue-on-error: true
     - run: npm run test
     
     - name: Upload a Build Artifact
-      continue-on-error: true
+      if: always()
       uses: actions/upload-artifact@v3.0.0
       with:
         # Artifact name
